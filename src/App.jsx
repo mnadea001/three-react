@@ -1,11 +1,13 @@
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
+import { StrictMode } from "react";
 import ExperienceComponent from "./ExperienceComponent";
 import * as THREE from 'three'
 function App() {
   return (
+    <StrictMode>
     <Canvas
-    // dpr={ [1, 2]}
+    // dpr={ [1, 2]} 
       // flat
       gl={
         {
@@ -24,6 +26,7 @@ function App() {
     >
       <ExperienceComponent />
     </Canvas>
+    </StrictMode>
   );
 }
 
