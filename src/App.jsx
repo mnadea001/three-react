@@ -6,7 +6,6 @@ function App() {
   return (
 <Canvas>
   <ExperienceComponent/>
-
 </Canvas>
  
 
