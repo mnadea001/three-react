@@ -51,8 +51,10 @@ With OrbitControl you modify zoom / scene's depth with scroll*
 The documentation is very complete and easy to use https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
 Paul Henschel  made a great tutorial that will guide you in creating an “Awwwards-type” website with R3F https://twitter.com/0xca0a/status/1445409346305892353
 The PMNDRS’ Discord is full of awesome people that will be glad to help you if you need them to: https://discord.com/invite/poimandres
+
 Hazem (@HazemOIbrahim) recreated some of the Three.js Journey lessons with R3F https://journey.pmnd.rs/
 
+https://github.com/pmndrs/drei
 
 ### Font converters
 
