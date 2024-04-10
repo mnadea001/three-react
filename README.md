@@ -52,3 +52,14 @@ The documentation is very complete and easy to use https://docs.pmnd.rs/react-th
 Paul Henschel  made a great tutorial that will guide you in creating an “Awwwards-type” website with R3F https://twitter.com/0xca0a/status/1445409346305892353
 The PMNDRS’ Discord is full of awesome people that will be glad to help you if you need them to: https://discord.com/invite/poimandres
 Hazem (@HazemOIbrahim) recreated some of the Three.js Journey lessons with R3F https://journey.pmnd.rs/
+
+
+### Font converters
+
+https://transfonter.org/
+https://www.fontsquirrel.com/tools/webfont-generator
+
+
+## google-webfonts-helper
+https://gwfh.mranftl.com/fonts
+

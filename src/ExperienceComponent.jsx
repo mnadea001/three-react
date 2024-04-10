@@ -3,6 +3,7 @@ import {
   OrbitControls,
   TransformControls,
   Html,
+  Text
 } from "@react-three/drei";
 import { useRef } from "react";
 
@@ -36,7 +37,7 @@ export default function ExperienceComponent() {
           distanceFactor={6}
           occlude={[sphere, cube]}
           >
-            There is a sphere
+            There is a sphere 👍
             </Html>
         </mesh>
       </PivotControls>
@@ -61,6 +62,18 @@ export default function ExperienceComponent() {
       {/* <Html>
         Test
       </Html> */}
+
+      <Text 
+      font="./bangers-v20-latin-regular.woff"
+      fontSize={ 1 }
+      color="salmon"
+      position-y={ 2 }
+      maxWidth={ 2 }
+      textAlign="center"
+      >
+        I Love Jah
+        {/* <meshNormalMaterial/> */}
+      </Text>
     </>
   );
 }
