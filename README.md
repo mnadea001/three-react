@@ -40,3 +40,6 @@ We can change the constructor parameters by providing an array to the args attri
     <boxGeometry/>
     <meshBasicMaterial color="mediumpurple" wireframe />
 </mesh>
+
+
+With OrbitControl you modify zoom / scene's depth with scroll*
