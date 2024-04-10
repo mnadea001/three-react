@@ -2,12 +2,13 @@ import {
   PivotControls,
   OrbitControls,
   TransformControls,
+  Html,
 } from "@react-three/drei";
 import { useRef } from "react";
 
 export default function ExperienceComponent() {
   const cube = useRef();
-
+  const sphere = useRef();
   return (
     <>
       <OrbitControls
@@ -18,16 +19,25 @@ export default function ExperienceComponent() {
       <ambientLight intensity={1.5} />
 
       <PivotControls
-      anchor={[0,0,0]}
-      depthTest={false}
-      lineWidth={1}
-      axisColors={['pink', 'red', 'green']}
-      scale={100}
-      fixed={true}
+        anchor={[0, 0, 0]}
+        depthTest={false}
+        lineWidth={1}
+        axisColors={["pink", "red", "green"]}
+        scale={100}
+        fixed={true}
       >
-        <mesh position-x={-2} rotation-x={Math.PI * 0.23}>
+        <mesh ref={sphere} position-x={-2} rotation-x={Math.PI * 0.23}>
           <sphereGeometry scale={1.5} />
           <meshStandardMaterial color="orange" />
+          <Html 
+          position={[1, 1, 0]}
+          wrapperClass="label"
+          center
+          distanceFactor={6}
+          occlude={[sphere, cube]}
+          >
+            There is a sphere
+            </Html>
         </mesh>
       </PivotControls>
 
@@ -47,6 +57,10 @@ export default function ExperienceComponent() {
         <planeGeometry />
         <meshStandardMaterial color="greenyellow" />
       </mesh>
+
+      {/* <Html>
+        Test
+      </Html> */}
     </>
   );
 }
