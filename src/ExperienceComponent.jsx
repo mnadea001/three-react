@@ -1,30 +1,16 @@
-import { useRef } from "react";
-import { useThree, extend, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import CustomObject from "./CustomObject";
-
-extend({ OrbitControls });
+import { OrbitControls, TransformControls } from "@react-three/drei";
+import { useRef } from 'react'
 
 export default function ExperienceComponent() {
-  const { camera, gl } = useThree();
 
-  const cubeRef = useRef();
-
-  useFrame((state, delta) => {
-    // state.camera.position.x += delta
-    cubeRef.current.rotation.y += delta;
-
-    // const angle = state.clock.elapsedTime
-    // state.camera.position.x = Math.sin(angle) * 8
-    // state.camera.position.y = Math.cos(angle) * 8
-    // state.camera.position.z = Math.cos(angle) * 8
-    // state.camera.lookAt(0,0,0)
-  });
+  const cube = useRef()
 
   return (
     <>
-      <orbitControls args={[camera, gl.domElement]} />
-
+      <OrbitControls
+      makeDefault
+      // enableDamping={false}
+      />
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
@@ -33,22 +19,21 @@ export default function ExperienceComponent() {
         <meshStandardMaterial color="orange" />
       </mesh>
 
-      <mesh
-        ref={cubeRef}
-        scale={1.5}
-        position-x={2}
-        rotation-y={Math.PI * 0.25}
-      >
-        <boxGeometry scale={1.5} />
-        <meshStandardMaterial color="mediumpurple" />
+      <mesh ref={ cube } position-x={2} scale={1.5}  rotation-y={Math.PI * 0.25}>
+          <boxGeometry scale={1.5} />
+          <meshStandardMaterial color="mediumpurple" />
       </mesh>
+
+      <TransformControls object={cube} 
+      // mode="scale"
+      // mode="rotate"
+      mode="translate"
+      />
 
       <mesh scale={10} position-y={-1} rotation-x={-Math.PI * 0.5}>
         <planeGeometry />
         <meshStandardMaterial color="greenyellow" />
       </mesh>
-
-      <CustomObject />
     </>
   );
 }

@@ -10,8 +10,8 @@ npm run dev
 # Librairies
 
 npm install three@0.158 @react-three/fiber@8.15
-
-
+npm install @react-three/drei@9.88
+npm install @react-three/drei@latest
 
 # Code examples
 
