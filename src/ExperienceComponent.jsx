@@ -3,7 +3,8 @@ import {
   OrbitControls,
   TransformControls,
   Html,
-  Text
+  Text,
+  Float,
 } from "@react-three/drei";
 import { useRef } from "react";
 
@@ -30,15 +31,15 @@ export default function ExperienceComponent() {
         <mesh ref={sphere} position-x={-2} rotation-x={Math.PI * 0.23}>
           <sphereGeometry scale={1.5} />
           <meshStandardMaterial color="orange" />
-          <Html 
-          position={[1, 1, 0]}
-          wrapperClass="label"
-          center
-          distanceFactor={6}
-          occlude={[sphere, cube]}
+          <Html
+            position={[1, 1, 0]}
+            wrapperClass="label"
+            center
+            distanceFactor={6}
+            occlude={[sphere, cube]}
           >
             There is a sphere 👍
-            </Html>
+          </Html>
         </mesh>
       </PivotControls>
 
@@ -63,17 +64,24 @@ export default function ExperienceComponent() {
         Test
       </Html> */}
 
-      <Text 
-      font="./bangers-v20-latin-regular.woff"
-      fontSize={ 1 }
-      color="salmon"
-      position-y={ 2 }
-      maxWidth={ 2 }
-      textAlign="center"
+      <Float
+        // speed={5}
+        // floatIntensity={5 }
+        // rotationIntensity={5}
+        
       >
-        I Love Jah
-        {/* <meshNormalMaterial/> */}
-      </Text>
+        <Text
+          font="./bangers-v20-latin-regular.woff"
+          fontSize={1}
+          color="salmon"
+          position-y={2}
+          maxWidth={2}
+          textAlign="center"
+        >
+          I Love Jah
+          {/* <meshNormalMaterial/> */}
+        </Text>
+      </Float>
     </>
   );
 }
