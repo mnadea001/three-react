@@ -79,14 +79,14 @@ export default function ExperienceComponent() {
         
       >
         <Text
-          font="./bangers-v20-latin-regular.woff"
+          font="./YesevaOne-Regular.woff"
           fontSize={1}
           color="salmon"
-          position-y={2}
-          maxWidth={2}
+          position-y={3}
+          maxWidth={4}
           textAlign="center"
         >
-          I Love Jah
+          Welcome in my 3D App
           {/* <meshNormalMaterial/> */}
         </Text>
       </Float>
