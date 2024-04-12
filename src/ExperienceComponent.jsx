@@ -86,7 +86,7 @@ export default function ExperienceComponent() {
           maxWidth={4}
           textAlign="center"
         >
-          Welcome in my 3D App
+          hhheelllooo
           {/* <meshNormalMaterial/> */}
         </Text>
       </Float>
